@@ -1,0 +1,62 @@
+<div class="navbar-container">
+  <img src="assets/icons/logo.svg" alt="logo" class="logo">
+  <img (click)="toggleMenu()" *ngIf="isMobile()" class="burger-icon" src="assets/icons/burger.svg">
+  <div *ngIf="menuOpen" class="mobile-menu">
+    <div class="mobile-menu-search">
+      <img class="search-icon" src="assets/icons/search-icon.svg">
+      <h1 class="search-placeholder">Search</h1>
+    </div>
+    <div class="mobile-menu-selection">
+      <h1 class="mobile-menu-text">ABOUT CHERRY</h1>
+      <img class="plus-icon" src="assets/icons/plus.svg" alt="">
+    </div>
+    <div class="mobile-menu-selection">
+      <h1 class="mobile-menu-text">BUSINESS AREAS</h1>
+      <img class="plus-icon" src="assets/icons/plus.svg" alt="">
+    </div>
+    <div class="mobile-menu-selection">
+      <h1 class="mobile-menu-text">CORPORATE GOVERNANCE</h1>
+      <img class="plus-icon" src="assets/icons/plus.svg" alt="">
+    </div>
+    <div class="mobile-menu-selection">
+      <h1 class="mobile-menu-text">INVESTORS</h1>
+      <img class="plus-icon" src="assets/icons/plus.svg" alt="">
+    </div>
+    <div class="mobile-menu-selection">
+      <h1 class="mobile-menu-text">MEDIA</h1>
+      <img class="plus-icon" src="assets/icons/plus.svg" alt="">
+    </div>
+    <div class="mobile-menu-selection">
+      <h1 class="mobile-menu-text">CAREER</h1>
+      <img class="plus-icon" src="assets/icons/plus.svg" alt="">
+    </div>
+    <div class="mobile-menu-selection">
+      <h1 class="mobile-menu-text">CONTACT</h1>
+      <img class="plus-icon" src="assets/icons/plus.svg" alt="">
+    </div>
+  </div>
+  <div class="red-bar"></div>
+  <div class="action-button-container">
+    <div class="mini-container" *ngIf="!isMobile()">
+      <h1 class="navbar-button">ABOUT CHERRY</h1>
+      <h1 class="navbar-button">BUSINESS AREAS</h1>
+      <h1 class="navbar-button">CORPORATE GOVERNANCE</h1>
+      <h1 class="navbar-button">INVESTORS</h1>
+      <h1 class="navbar-button">MEDIA</h1>
+      <h1 class="navbar-button">CAREER</h1>
+      <h1 class="navbar-button">CONTACT</h1>
+    </div>
+    <div class="extra-buttons" *ngIf="!isMobile()">
+      <h1 class="stock-price">CHER B: 59.50sek<br>+1.75</h1>
+      <div class="lang-switcher">
+        <h1 class="lang-text">ENG</h1>
+        <img src="assets/icons/arrow-down-white.svg">
+      </div>
+      <img (click)="toggleSearch()" class="search-icon" src="assets/icons/search-icon.svg">
+    </div>
+  </div>
+  <div *ngIf="searchOpen" class="search-bar">
+    <h1 class="big-search-placeholder">Lorem ipsum</h1>
+    <div class="big-search-button"><p class="src-txt">Search</p></div>
+  </div>
+</div>
